@@ -368,23 +368,23 @@
         <!-- LOGIN PAGE -->
         <div id="login-page">
             <div id="countdown">
-                <h2>Menuju Hari Spesialmu</h2>
+                <h2>A Countdown for My Love</h2>
                 <div id="timer">
                     <div class="timer-unit">
                         <span id="days">00</span>
-                        <p>Hari</p>
+                        <p>Days</p>
                     </div>
                     <div class="timer-unit">
                         <span id="hours">00</span>
-                        <p>Jam</p>
+                        <p>Hours</p>
                     </div>
                     <div class="timer-unit">
                         <span id="minutes">00</span>
-                        <p>Menit</p>
+                        <p>Minutes</p>
                     </div>
                     <div class="timer-unit">
                         <span id="seconds">00</span>
-                        <p>Detik</p>
+                        <p>Seconds</p>
                     </div>
                 </div>
             </div>
@@ -392,9 +392,9 @@
             <form class="login-form" id="login-form">
                 <input type="text" id="username" placeholder="Username" required>
                 <input type="password" id="password" placeholder="Password" required>
-                <button type="submit">Masuk</button>
-                <p id="error-message">Username atau password salah!</p>
-                <a href="https://wa.me/6283129627886" target="_blank" class="whatsapp-link">tanya pacarmu loginnya</a>
+                <button type="submit">Enter</button>
+                <p id="error-message">Wrong username or password!</p>
+                <a href="https://wa.me/6283129627886" target="_blank" class="whatsapp-link">ask your girlfriend for the login</a>
             </form>
         </div>
 
@@ -408,13 +408,13 @@
 
                 <div class="slideshow-container">
                     <div class="slide fade">
-                        <img src="https://placehold.co/600x400/cad2c5/354f52?text=Foto+Kita+1" alt="Foto Kenangan 1">
+                        <img src="https://placehold.co/600x400/cad2c5/354f52?text=Our+Photo+1" alt="Foto Kenangan 1">
                     </div>
                     <div class="slide fade">
-                        <img src="https://placehold.co/600x400/84a98c/2f3e46?text=Foto+Kita+2" alt="Foto Kenangan 2">
+                        <img src="https://placehold.co/600x400/84a98c/2f3e46?text=Our+Photo+2" alt="Foto Kenangan 2">
                     </div>
                     <div class="slide fade">
-                        <img src="https://placehold.co/600x400/52796f/ffffff?text=Foto+Kita+3" alt="Foto Kenangan 3">
+                        <img src="https://placehold.co/600x400/52796f/ffffff?text=Our+Photo+3" alt="Foto Kenangan 3">
                     </div>
                 </div>
     
@@ -423,7 +423,7 @@
                     <span id="typed-text"></span><span class="typing-cursor"></span>
                 </div>
     
-                <button id="surprise-btn">Klik Untuk Kejutan!</button>
+                <button id="surprise-btn">Click for a Surprise!</button>
             </div>
         </div>
         
@@ -457,7 +457,7 @@
 
                 if (distance < 0) {
                     clearInterval(timerInterval);
-                    document.getElementById('timer').innerHTML = "<h2>Waktunya Telah Tiba!</h2>";
+                    document.getElementById('timer').innerHTML = "<h2>The Day is Here!</h2>";
                     return;
                 }
 
@@ -480,14 +480,14 @@
 
                 if (usernameInput.value === correctUsername && passwordInput.value === correctPassword) {
                     // Play music
-                    music.play().catch(error => console.log("Autoplay musik diblokir oleh browser. Diperlukan interaksi pengguna."));
+                    music.play().catch(error => console.log("Autoplay was prevented by the browser."));
 
                     // Transition
                     loginPage.classList.add('fade-out');
                     setTimeout(() => {
                         mainPage.classList.add('fade-in');
                         startMainPageAnimations();
-                    }, 1500); // Waktu harus sama dengan transisi CSS
+                    }, 1500); // Must match CSS transition time
                 } else {
                     errorMessage.style.visibility = 'visible';
                     setTimeout(() => {
@@ -500,10 +500,10 @@
             function startMainPageAnimations() {
                 // 1. Typing Animation
                 const messages = [
-                    "Selamat ulang tahun yang ke-16, sayang.",
-                    "Semoga hari ini seindah dan seistimewa dirimu.",
-                    "Terima kasih telah menjadi bagian terpenting dalam hidupku.",
-                    "Aku sangat beruntung memilikimu.",
+                    "Happy 16th birthday, my love.",
+                    "I hope your day is as wonderful and special as you are.",
+                    "Thank you for being the most important part of my life.",
+                    "I'm so incredibly lucky to have you.",
                     "I love you more than words can say."
                 ];
                 let msgIndex = 0;
@@ -542,28 +542,28 @@
                     slideIndex++;
                     if (slideIndex > slides.length) {slideIndex = 1}
                     slides[slideIndex - 1].style.display = "block";
-                    setTimeout(showSlides, 4000); // Ganti gambar setiap 4 detik
+                    setTimeout(showSlides, 4000); // Change image every 4 seconds
                 }
                 showSlides();
             }
 
             // --- Surprise Button Logic ---
             surpriseBtn.addEventListener('click', () => {
-                createParticles(100); // Buat 100 partikel saat tombol diklik
+                createParticles(100); // Create 100 particles on click
             });
 
             function createParticles(count) {
                 const colors = ['#d00000', '#e85d04', '#3f3d56', '#5a7a9a'];
-                const shapes = ['❤️']; // HANYA HATI - UPDATED
+                const shapes = ['❤️']; // HEARTS ONLY - UPDATED
 
                 for (let i = 0; i < count; i++) {
                     const particle = document.createElement('div');
                     particle.classList.add('particle');
                     
-                    const x = Math.random() * 100; // posisi horizontal (vw)
-                    const duration = Math.random() * 3 + 2; // durasi jatuh (detik)
-                    const delay = Math.random() * 1; // delay mulai
-                    const size = Math.random() * 20 + 10; // ukuran (px)
+                    const x = Math.random() * 100; // horizontal position (vw)
+                    const duration = Math.random() * 3 + 2; // fall duration (seconds)
+                    const delay = Math.random() * 1; // start delay
+                    const size = Math.random() * 20 + 10; // size (px)
                     const isShape = Math.random() > 0.5;
 
                     particle.style.left = `${x}vw`;
@@ -582,7 +582,7 @@
 
                     particlesContainer.appendChild(particle);
 
-                    // Hapus partikel dari DOM setelah animasi selesai
+                    // Remove particle from DOM after animation finishes
                     setTimeout(() => {
                         particle.remove();
                     }, (duration + delay) * 1000);
